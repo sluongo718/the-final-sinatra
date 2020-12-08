@@ -1,0 +1,15 @@
+<h1>Welcome back pokepooper</h1>
+<h3>we hope you made some new discoverys on your quest</h3>
+
+ <% if flash[:message] %>
+     <%= flash[:message] %>
+     <%end%>
+
+<form method="post" action="/signin">
+    Username: <input type="text" name="user[username]">
+    password: <input type="text" name="user[password]">
+    <input type="submit" value="Sign In">
+</form>
+<br>
+<h3>Dont have an account create one here!</h3>
+<a href="/signup">log In</a>

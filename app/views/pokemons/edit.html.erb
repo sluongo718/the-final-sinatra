@@ -1,0 +1,13 @@
+Editing <%= @pokemon.name %> <br>
+
+
+
+<form method="post" action="/pokemons/<%= @pokemon.id %>">
+    <input type="hidden" name="_method" value="patch">
+    <label>Pokemon Name:</label>
+    <input type="text" name="pokemon[name]" value="<%= @pokemon.name %>">
+    <label>Pokemon Type:</label>
+    <input type="text" name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>">
+
+    <input type="submit" value="Enter Pokemon">
+</form>

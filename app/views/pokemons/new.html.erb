@@ -1,0 +1,11 @@
+<h1>found a new pokemon you came across? add it to your list</h1>
+
+<form method="post" action="/pokemons">
+    <input type="hidden" name="pokemon[user_id]" value="<%= current_user.id %>">
+    <label>Pokemon Name:</label>
+    <input type="text" name="pokemon[name]">
+    <label>Pokemon Type:</label>
+    <input type="text" name="pokemon[poke_type]">
+    <input type="submit" value="add pokemon">
+
+</form>

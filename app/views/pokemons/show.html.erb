@@ -1,0 +1,17 @@
+Name: <%= @pokemon.name %><br>
+Type: <%= @pokemon.poke_type %><br>
+
+<% if flash[:message] %>
+<%= flash[:message] %>
+<%end%><br>
+<% if current_user == @pokemon.user %>
+    <a href="/pokemons/<%= @pokemon.id %>/edit">Edit Pokemon</a><br>
+    <form method="post" action="/pokemons/<%= @pokemon.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Pokemon">
+
+</form>
+<% end %>
+<br>
+<a href="/pokemons/new">Add Pokemon</a><br>
+ <a href="/users/<%= current_user.id %>/pokemons">see your pokemon</a>
